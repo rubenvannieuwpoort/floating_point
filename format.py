@@ -41,6 +41,22 @@ class FloatingPointFormat:
 	
 	def zero(self, sign = 0):
 		return self.pack(sign, -self.bias, 0)
+	
+	def format(self, bits):
+		sign, exponent, mantissa = self.unpack(bits)
+		if self.is_nan(bits):
+			print('NaN')
+			return
+		if self.is_inf(bits):
+			if sign: print('-∞')
+			else: print('+∞')
+			return
+		if self.is_zero(bits):
+			if sign: print('-0')
+			else: print('+0')
+			return
+		
+		return ('-' if sign == 1 else ' ') + '1.' + bin(mantissa)[3:] + ' x 2^' + str(exponent)
 
 binary32 = FloatingPointFormat(8, 23)
 default = binary32
