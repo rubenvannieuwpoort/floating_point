@@ -9,7 +9,7 @@ The tests are adapted from [IBM's FPgen testset](https://www.research.ibm.com/ha
 
 ## Why are denormals not supported?
 
-I plan to make a VHDL-based hardware implementation, and denormals are a pain in the ass to implement in hardware. For this reasons, many hardware implementation do not support denormals. I might add *some* support later, but probably not. You're always welcome to open a pull request, though.
+I plan to make a VHDL-based hardware implementation, and denormals are a pain in the ass to implement in hardware. For this reasons, many hardware implementation do not support denormals. I might add support later, but I probably won't. You're always welcome to open a pull request, though.
 
 
 ## Usage example
