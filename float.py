@@ -2,7 +2,7 @@
 
 # TODO: Are common and format even necessary? Aren't these exported by addition???
 from addition import add, sub
-from prettyprint import prettyprint
+from multiplication import mul
 from format import binary32
 
 # Some software implementations of floating point numbers.

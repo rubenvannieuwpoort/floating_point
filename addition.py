@@ -21,7 +21,7 @@ def add(bits1, bits2, fmt = format.default, rounding_scheme = None):
 	if not(fmt.is_inf(bits1)) and fmt.is_inf(bits2):
 		return fmt.inf(sign2)
 	if fmt.is_inf(bits1) and fmt.is_inf(bits2):
-		if sign1 == sign2: return inf_bits(sign1, fmt)
+		if sign1 == sign2: return fmt.inf(sign1)
 		else: return fmt.nan()
 	if fmt.is_zero(bits2):
 		if fmt.is_zero(bits1):
